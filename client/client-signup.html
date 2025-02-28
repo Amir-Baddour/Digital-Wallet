@@ -23,7 +23,7 @@
     <!-- Main Content -->
     <div class="main-content">
         <div class="image-section">
-            <img src="C:\xampp\htdocs\Wallet\client\assets\pic.jpg" alt="Wallet Signup Background">
+            <img src="./assets/pic.jpg" alt="Wallet Signup Background">
         </div>
         <div class="form-section">
             <h1>Sign up</h1>
@@ -36,7 +36,7 @@
                 <input type="text" id="lname" name="lname" placeholder="Enter your last name" required>
 
                 <label for="number">Contact Number</label>
-                <input type="text" id="number" name="number" placeholder="Enter your phone number" required>
+                <input type="tel" id="number" name="number" placeholder="Enter your phone number" required>
 
                 <label for="address">Address</label>
                 <input type="text" id="address" name="address" placeholder="Enter your address" required>
@@ -52,16 +52,16 @@
             <div class="social-login">
                 <p>Or register with:</p>
                 <div class="social-icons">
-                    <div class="social-icon google"><span class="fa fa-google"></span></div>
-                    <div class="social-icon facebook"><span class="fa fa-facebook"></span></div>
-                    <div class="social-icon instagram"><span class="fa fa-instagram"></span></div>
-                    <div class="social-icon twitter"><span class="fa fa-twitter"></span></div>
-                    <div class="social-icon linkedin"><span class="fa fa-linkedin"></span></div>
+                    <a href="/auth/google" class="social-icon google"><span class="fa fa-google"></span></a>
+                    <a href="/auth/facebook" class="social-icon facebook"><span class="fa fa-facebook"></span></a>
+                    <a href="/auth/instagram" class="social-icon instagram"><span class="fa fa-instagram"></span></a>
+                    <a href="/auth/twitter" class="social-icon twitter"><span class="fa fa-twitter"></span></a>
+                    <a href="/auth/linkedin" class="social-icon linkedin"><span class="fa fa-linkedin"></span></a>
                 </div>
             </div>
             <p class="terms">
                 By clicking on the Sign up button, you agree to our
-                <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>.
+                <a href="/terms">Terms and Conditions</a> and <a href="/privacy">Privacy Policy</a>.
             </p>
             <p class="login-link">Already have an account? <a href="login.html">Login Here</a></p>
         </div>
