@@ -346,6 +346,556 @@ button:hover {
     display: none;
 }
 /*finish login styling*/
+/*start design of clint landing page*/
+/* Sets the default font, removes margin and padding, and defines text color and line height for the entire page. */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Container class to center content and set a max-width for responsiveness. */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Styles for headings (h1, h2, h3) to use the primary color (#007bff). */
+  h1, h2, h3 {
+    color: #007bff;
+  }
+  
+  /* Removes underline from links and sets their color to the primary color. */
+  a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  /* Adds an underline to links on hover for better user interaction. */
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Styles for buttons with padding, background color, and rounded corners. */
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Changes button background color on hover for interactivity. */
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Navigation Bar */
+  /* Sets the background color and padding for the navigation bar. */
+  nav {
+    background-color: #333;
+    padding: 15px 0;
+  }
+  
+  /* Flexbox layout to align logo and navigation links horizontally. */
+  nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Styles for the logo, including color and font size. */
+  nav .logo {
+    color: #fff;
+    font-size: 1.5em;
+    margin: 0;
+  }
+  
+  /* Removes default list styling and aligns navigation links horizontally. */
+  nav .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  /* Adds spacing between navigation links. */
+  nav .nav-links li {
+    margin-left: 20px;
+  }
+  
+  /* Styles for navigation links, including color and font size. */
+  nav .nav-links a {
+    color: #fff;
+    font-size: 1em;
+  }
+  
+  /* Changes link color on hover for better user interaction. */
+  nav .nav-links a:hover {
+    color: #007bff;
+  }
+  
+  /* Edit Profile Section */
+  /* Adds padding and a light background color to the edit profile section. */
+  .edit-profile {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+  }
+  
+  /* Centers the form and sets a max-width for better readability. */
+  .edit-profile form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Adds spacing between form groups (e.g., input fields). */
+  .edit-profile .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Styles for form labels, making them bold and adding spacing. */
+  .edit-profile label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Styles for input fields, including padding, border, and rounded corners. */
+  .edit-profile input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Wallet Section */
+  /* Adds padding to the wallet section. */
+  .wallet {
+    padding: 50px 0;
+  }
+  
+  /* Styles for the balance info heading, including font size and color. */
+  .balance-info h3 {
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  /* Styles for the balance amount, using the primary color. */
+  .balance-info span {
+    color: #007bff;
+  }
+  
+  /* Styles for the transaction history table, including borders and padding. */
+  .transaction-history table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  /* Styles for table headers and cells, including padding and borders. */
+  .transaction-history th, .transaction-history td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  /* Styles for table headers, including background and text color. */
+  .transaction-history th {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Centers the wallet action buttons (e.g., Deposit, Withdraw). */
+  .wallet-actions {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* Contact Admin Section */
+  /* Adds padding and a light background color to the contact admin section. */
+  .contact-admin {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+  }
+  
+  /* Centers the form and sets a max-width for better readability. */
+  .contact-admin form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Adds spacing between form groups (e.g., input fields). */
+  .contact-admin .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Styles for form labels, making them bold and adding spacing. */
+  .contact-admin label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Styles for input fields and textarea, including padding, border, and rounded corners. */
+  .contact-admin input, .contact-admin textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Allows the textarea to be resized vertically. */
+  .contact-admin textarea {
+    resize: vertical;
+  }
+  
+  /* Footer */
+  /* Styles for the footer, including background color, text color, and padding. */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+  }
+  
+  /* Removes default margin from the footer paragraph. */
+  footer p {
+    margin: 0;
+  }
+  
+  /* Hero Section */
+  /* Flexbox layout to align hero text and image horizontally. */
+  .hero {
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #f8f9fa;
+  }
+  
+  /* Flexbox layout to space out hero text and image. */
+  .hero .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Limits the width of the hero text to 50% of the container. */
+  .hero-text {
+    max-width: 50%;
+  }
+  
+  /* Styles for the hero heading, including font size and color. */
+  .hero-text h2 {
+    font-size: 2.5em;
+    color: #007bff;
+  }
+  
+  /* Styles for the hero paragraph, including font size and spacing. */
+  .hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  /* Styles for the hero image, including max-width and rounded corners. */
+  .hero-image img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Chat with Admin Section */
+  /* Adds padding and a white background to the chat admin section. */
+  .chat-admin {
+    padding: 50px 0;
+    background-color: #fff;
+  }
+  
+  /* Styles for the chat box, including max-width, border, and padding. */
+  .chat-box {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  /* Styles for the chat messages area, including height and scroll behavior. */
+  .chat-messages {
+    height: 200px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  /* Flexbox layout to align chat input and button horizontally. */
+  .chat-input {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Styles for the chat input field, including padding and border. */
+  .chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* QR Code Section */
+  /* Adds padding and a light background color to the QR code section. */
+  .qr-code {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  
+  /* Styles for the QR code placeholder image, including max-width and spacing. */
+  .qr-placeholder img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Styles for the QR code placeholder text, including font size and color. */
+  .qr-placeholder p {
+    font-size: 1.1em;
+    color: #666;
+  }
+  
+  /* Features Section */
+  /* Adds padding and a white background to the features section. */
+  .features {
+    padding: 50px 0;
+    background-color: #fff;
+  }
+  
+  /* Centers the features heading and sets font size and color. */
+  .features h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+    color: #007bff;
+  }
+  
+  /* Grid layout for the feature items, with responsive columns. */
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Styles for each feature item, including padding, background, and hover effects. */
+  .feature-item {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Adds a lift and shadow effect when hovering over a feature item. */
+  .feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styles for the feature item heading, including font size and color. */
+  .feature-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  /* Styles for the feature item paragraph, including font size and color. */
+  .feature-item p {
+    font-size: 1em;
+    color: #666;
+  }
+  
+  /* QR Code Page */
+  /* Adds padding and a light background color to the QR code page. */
+  .qr-code {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+  }
+  
+  /* Centers the QR code heading and sets font size and color. */
+  .qr-code h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+    color: #007bff;
+  }
+  
+  /* Flexbox layout to align QR code image and instructions horizontally. */
+  .qr-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styles for the QR code image, including max-width and rounded corners. */
+  .qr-image img {
+    max-width: 200px;
+    border-radius: 10px;
+  }
+  
+  /* Styles for the QR code instructions heading, including font size and color. */
+  .qr-instructions h3 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  /* Styles for the ordered list in the QR code instructions, including padding. */
+  .qr-instructions ol {
+    padding-left: 20px;
+  }
+  
+  /* Styles for the list items in the QR code instructions, including spacing and color. */
+  .qr-instructions li {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #666;
+  }
+  /* User Dropdown Menu */
+.user-dropdown {
+    position: relative;
+  }
+  
+  .user-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .user-dropdown .dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .user-dropdown .dropdown-content a:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .user-dropdown:hover .dropdown-content {
+    display: block;
+  }
+  /* User Dropdown Menu */
+.user-dropdown {
+    position: relative;
+  }
+  
+  .user-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    min-width: 200px; /* Set a minimum width for better readability */
+  }
+  
+  .user-dropdown .dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .user-dropdown .dropdown-content a:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+  }
+  
+  .user-dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Log Out and Switch Account Buttons */
+  #logout, #switch-account, #see-account {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  #logout:hover, #switch-account:hover, #see-account:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+  }
+  
+  /* Account Details Popup */
+  .account-details-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-width: 400px;
+    width: 90%;
+  }
+  
+  .account-details-popup h3 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #007bff;
+  }
+  
+  .account-details-popup p {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #333;
+  }
+  
+  .account-details-popup .close-btn {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .account-details-popup .close-btn:hover {
+    text-decoration: underline;
+  }
+/*end design of clint landing page*/
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .main-content {
