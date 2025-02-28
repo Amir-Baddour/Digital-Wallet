@@ -281,7 +281,22 @@ button:hover {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+/* Sign Up Link */
+.signup-link {
+    text-align: center;
+    margin-top: 15px; /* Increased margin for better spacing */
+    color: #666;
+    font-size: 14px;
+}
 
+.signup-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
 /* Remove image section */
 .login-centered .image-section {
     display: none;
