@@ -263,6 +263,50 @@ button:hover {
 .login-link a:hover {
     text-decoration: underline;
 }
+/* Identity Verification Section */
+.identity-verification {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.identity-verification h3 {
+    font-size: 18px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.identity-verification p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.identity-verification input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.identity-verification button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.identity-verification button:hover {
+    background: var(--secondary-color);
+}
+
+#upload-status {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--primary-color);
+}
 /*login styling*/
 /* Centered Login Form */
 .login-centered {
