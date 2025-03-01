@@ -307,6 +307,49 @@ button:hover {
     font-size: 14px;
     color: var(--primary-color);
 }
+/* Add Visa Card Section */
+.add-card {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.add-card h3 {
+    font-size: 18px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.add-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.add-card label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.add-card input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.add-card input:focus {
+    border-color: var(--primary-color);
+}
+/*ending of signup */
 /*login styling*/
 /* Centered Login Form */
 .login-centered {
