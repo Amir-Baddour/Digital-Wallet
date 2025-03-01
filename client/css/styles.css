@@ -894,6 +894,75 @@ body {
   .account-details-popup .close-btn:hover {
     text-decoration: underline;
   }
+  
+ /* Contact Form Section */
+.contact-form {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center; /* Center the heading and content */
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #007bff;
+}
+
+.form {
+    max-width: 600px;
+    margin: 0 auto; /* Center the form */
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Align labels and inputs to the left */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
 /*end design of clint landing page*/
 
 /* Responsive Design */
