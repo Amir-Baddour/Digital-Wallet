@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Users</title>
+    <link rel="stylesheet" href="../admin/css/a-styles.css">
+
+</head>
+<body>
+    <nav class="admin-nav">
+        <div class="admin-nav-container">
+            <h1 class="admin-logo">Admin Panel</h1>
+            <ul class="admin-nav-links">
+                <li><a href="admin-dashboard.html">Dashboard</a></li>
+                <li><a href="admin-user.html">Users</a></li>
+                <li><a href="admin-transaction.html">Transactions</a></li>
+                <li><a href="admin-report.html">Reports</a></li>
+                <li><a href="#" id="logout">Log Out</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="admin-users">
+        <div class="admin-container">
+            <h2>Manage Users</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>john.doe@example.com</td>
+                        <td>Client</td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- More rows here -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+</html>

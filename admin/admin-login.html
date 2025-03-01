@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/a-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo">Wallet</a>
+            
+            <div class="navbar-actions">
+                <a href="admin-login.html" class="navbar-login">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content login-centered">
+        <div class="form-section">
+            <h1>Log In</h1>
+            <form>
+                <label for="email-phone">Email/Phone/Username</label>
+                <input type="text" id="email-phone" name="email-phone" placeholder="Enter your email or phone" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <div class="forgot-password">
+                    <a href="forgot-password.html">Forgot your password?</a>
+                </div>
+
+                <button type="submit">Log In</button>
+            </form>
+            <div class="social-login">
+                <p>Or log in with:</p>
+                <div class="social-icons">
+                    <a href="/auth/google" class="social-icon google"><span class="fa fa-google"></span></a>
+                    <a href="/auth/facebook" class="social-icon facebook"><span class="fa fa-facebook"></span></a>
+                    <a href="/auth/instagram" class="social-icon instagram"><span class="fa fa-instagram"></span></a>
+                    <a href="/auth/twitter" class="social-icon twitter"><span class="fa fa-twitter"></span></a>
+                    <a href="/auth/linkedin" class="social-icon linkedin"><span class="fa fa-linkedin"></span></a>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
