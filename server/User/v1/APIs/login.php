@@ -16,6 +16,8 @@ switch ($method) {
     case 'POST':
         // Handle login
         $data = json_decode(file_get_contents('php://input'), true);
+        error_log('Received Data: ' . print_r($data, true));  // Log received data for debugging
+
         if (isset($data['email_phone'], $data['password'])) {
             $emailPhone = $data['email_phone'];
             $password = $data['password'];
@@ -29,10 +31,12 @@ switch ($method) {
 
             if ($stmt->fetch() && password_verify($password, $passwordHash)) {
                 // Login successful
+                error_log("Login successful for user: " . $emailPhone);  // Log successful login
                 echo json_encode(['success' => true, 'message' => 'Login successful', 'user_id' => $userId]);
             } else {
                 // Invalid credentials
                 http_response_code(401); // Unauthorized
+                error_log("Invalid credentials for: " . $emailPhone);  // Log invalid attempt
                 echo json_encode(['error' => 'Invalid email/phone or password']);
             }
         } else {
