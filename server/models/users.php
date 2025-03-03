@@ -6,12 +6,16 @@ class Users {
     }
 
     // Create a new user
-    public function create($email, $password, $role, $full_name, $phone, $address) {
+    public function create($email, $password, $role, $fname, $lname, $phone, $address) {
         $password_hash = password_hash($password, PASSWORD_DEFAULT);
-        $stmt = $this->db->conn->prepare("INSERT INTO users (email, password_hash, role, full_name, phone_number, address) VALUES (?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssss", $email, $password_hash, $role, $full_name, $phone, $address);
+        $stmt = $this->db->conn->prepare("INSERT INTO users (email, password_hash, role, first_name, last_name, phone_number, address) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        
+        // Add type definition string: "sssisss"
+        $stmt->bind_param("sssssss", $email, $password_hash, $role, $fname, $lname, $phone, $address);
+    
         return $stmt->execute();
     }
+    
 
     // Read a user by ID
     public function read($id) {

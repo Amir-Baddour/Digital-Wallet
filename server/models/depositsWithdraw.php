@@ -1,4 +1,5 @@
 <?php
+
 class DepositsWithdrawals {
     private $db;
     public function __construct($db) {
