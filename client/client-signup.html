@@ -6,6 +6,8 @@
     <title>Sign Up</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Add Axios CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -13,8 +15,8 @@
         <div class="navbar-container">
             <a href="#" class="navbar-logo">Wallet</a>
             <div class="navbar-actions">
-                <a href="login.html" class="navbar-login">Login</a>
-                <a href="#" class="navbar-signup">Sign Up</a>
+                <a href="client-login.html" class="navbar-login">Login</a>
+                <a href="client-signup.html" class="navbar-signup">Sign Up</a>
             </div>
         </div>
     </nav>
@@ -27,13 +29,16 @@
         <div class="form-section">
             <h1>Sign up</h1>
             <h4>It's free and only takes a minute</h4>
-            <form>
+            <form id="signup-form">
                 <!-- Name Input -->
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="fname" placeholder="Enter your first name" required>
-
+                
                 <label for="lname">Last Name</label>
                 <input type="text" id="lname" name="lname" placeholder="Enter your last name" required>
+
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" placeholder="Enter your address" required>
 
                 <!-- Email Input -->
                 <label for="email">E-mail</label>
@@ -42,15 +47,6 @@
                 <!-- Password Input -->
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="Enter your password" required>
-
-                <!-- Identity Verification Section -->
-                <div class="identity-verification">
-                    <h3>Identity Verification</h3>
-                    <p>To comply with regulatory requirements, please upload a valid ID document (e.g., passport, driver's license).</p>
-                    <input type="file" id="id-document" accept="image/*, .pdf">
-                    <button type="button" onclick="uploadID()">Upload ID</button>
-                    <p id="upload-status"></p>
-                </div>
 
                 <!-- Add Visa Card Section -->
                 <div class="add-card">
@@ -83,10 +79,30 @@
                 By clicking on the Sign up button, you agree to our
                 <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>.
             </p>
-            <p class="login-link">Already have an account? <a href="login.html">Login Here</a></p>
+            <p class="login-link">Already have an account? <a href="client-login.html">Login Here</a></p>
         </div>
     </div>
 
-    <script src="./js/scripts.js"></script>
+    <script src="./js/auth.js"></script>
+    
+    <script>
+        // Attach event listener to the form
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get the values from the form
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const fname = document.getElementById('fname').value;
+            const lname = document.getElementById('lname').value;
+            const address = document.getElementById('address').value;
+            const cardNumber = document.getElementById('card-number').value;
+            const expiryDate = document.getElementById('expiry-date').value;
+            const cvv = document.getElementById('cvv').value;
+
+            // Call the signup function from auth.js
+            signup(email, password, fname, lname, address, cardNumber, expiryDate, cvv);
+        });
+    </script>
 </body>
 </html>

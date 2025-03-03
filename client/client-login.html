@@ -24,7 +24,7 @@
     <div class="main-content login-centered">
         <div class="form-section">
             <h1>Log In</h1>
-            <form>
+            <form id="login-form">
                 <label for="email-phone">Email/Phone/Username</label>
                 <input type="text" id="email-phone" name="email-phone" placeholder="Enter your email or phone" required>
 
@@ -47,7 +47,12 @@
                     <a href="/auth/linkedin" class="social-icon linkedin"><span class="fa fa-linkedin"></span></a>
                 </div>
             </div>
-            <p class="signup-link">Not a member? <a href="client-signup.html">Sign Up for Free</a></p>        </div>
+            <p class="signup-link">Not a member? <a href="client-signup.html">Sign Up for Free</a></p>
+        </div>
     </div>
+    
+    <!-- Add Axios before your auth.js -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/auth.js"></script>
 </body>
 </html>
