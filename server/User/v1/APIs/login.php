@@ -1,11 +1,19 @@
 <?php
 header('Content-Type: application/json'); // Set response type to JSON
+
+// CORS headers
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
+
+// Handle preflight request
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit();
+}
+
 require_once '../../../connection/db.php'; // Include the database connection
 require_once '../../../models/Users.php'; // Include the Users model
-
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: POST");
-header("Access-Control-Allow-Headers: Content-Type");
 
 $db = new Database();
 $users = new Users($db);

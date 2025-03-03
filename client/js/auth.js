@@ -53,6 +53,9 @@ document.addEventListener('DOMContentLoaded', function() {
 // Login function
 function login(emailPhone, password) {
     console.log("Before fetch");
+    console.log("Sending request to:", 'http://localhost/Digital-Wallet/server/User/v1/APIs/login.php');
+    console.log("Payload:", { email_phone: emailPhone, password: password });
+
     fetch('http://localhost/Digital-Wallet/server/User/v1/APIs/login.php', {
         method: 'POST',
         headers: {
@@ -64,6 +67,7 @@ function login(emailPhone, password) {
         })
     })
     .then(response => {
+        console.log("Response received:", response);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
