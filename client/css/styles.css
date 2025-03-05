@@ -1145,4 +1145,10 @@ body {
       padding: 10px;
       font-size: 14px;
   }
+  /* Hide Edit Profile and QR Code links in navbar */
+  nav ul li:nth-child(2), /* Edit Profile */
+  nav ul li:nth-child(4), /* QR Code */
+  .hero-image img { /* Hide hero image */
+      display: none;
+  }
 }
