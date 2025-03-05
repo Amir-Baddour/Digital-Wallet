@@ -32,8 +32,8 @@ switch ($method) {
 
     case 'PUT':
         $data = json_decode(file_get_contents('php://input'), true);
-        if (isset($data['id'], $data['full_name'], $data['phone'], $data['address'])) {
-            $result = $users->update($data['id'], $data['full_name'], $data['phone'], $data['address']);
+        if (isset($data['id'], $data['first_name'],$data['last_name'], $data['phone'], $data['address'])) {
+            $result = $users->update($data['id'], $data['first_name'],$data['last_name'], $data['phone'], $data['address']);
             echo json_encode(['success' => $result]);
         } else {
             http_response_code(400); // Bad Request

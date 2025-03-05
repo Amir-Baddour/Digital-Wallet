@@ -5,59 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wallet App - Edit Profile</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <!-- Include Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <!-- Navigation Bar -->
-  <nav>
-    <div class="container">
-      <h1 class="logo">Wallet App</h1>
-      <ul class="nav-links">
-        <li><a href="client-index.html">Home</a></li>
-        <li><a href="edit-profile-client.html">Edit Profile</a></li>
-        <li><a href="client-your-wallet.html">Wallet</a></li>
-        <li><a href="client-your-qr-code.html">QR Code</a></li>
-        <li><a href="#contact">Contact Admin</a></li>
-        <li class="user-dropdown">
-          <a href="#" class="user-account">My Account</a>
-          <div class="dropdown-content">
-            <a href="#" id="see-account">See My Account</a>
-            <a href="signup.html" id="switch-account">Switch Account</a>
-            <a href="#" id="logout">Log Out</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <!-- Edit Profile Section -->
-  <section class="edit-profile">
-    <div class="container">
-      <h2>Edit Profile</h2>
-      <form>
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" value="" placeholder="put your updated name" required>
+    <nav>
+        <div class="container">
+            <h1 class="logo">Wallet App</h1>
+            <ul class="nav-links">
+                <li><a href="client-index.html">Home</a></li>
+                <li><a href="edit-profile-client.html">Edit Profile</a></li>
+                <li><a href="client-your-wallet.html">Wallet</a></li>
+                <li><a href="client-your-qr-code.html">QR Code</a></li>
+                <li><a href="#contact">Contact Admin</a></li>
+                <li class="user-dropdown">
+                    <a href="#" class="user-account">My Account</a>
+                    <div class="dropdown-content">
+                        <a href="see-account.html" id="see-account">See My Account</a>
+                        <a href="signup.html" id="switch-account">Switch Account</a>
+                        <a href="client-signup.html" id="logout">Log Out</a>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" value=""placeholder="put your updated email" required>
+    </nav>
+    <!-- Edit Profile Section -->
+    <section class="edit-profile">
+        <div class="container">
+            <h2>Edit Profile</h2>
+            <form id="edit-profile-form">
+                <input type="hidden" id="user-id" value="1"> <!-- Replace with dynamic user ID -->
+                <div class="form-group">
+                  <label for="first-name">First Name</label>
+                  <input type="text" id="first-name" name="" value="" placeholder="Put your updated first name" required>
+              </div>
+              <div class="form-group">
+                  <label for="last-name">Last Name</label>
+                  <input type="text" id="last-name" name="" value="" placeholder="Put your updated last name" required>
+              </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="" value="" placeholder="Put your updated phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="" value="" placeholder="Put your updated address">
+                </div>
+                <button type="submit" class="btn">Update Profile</button>
+            </form>
         </div>
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" value="" placeholder="put your updated phone number" required>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Wallet App. All rights reserved.</p>
         </div>
-        <div class="form-group">
-          <label for="address">Address</label>
-          <input type="text" id="address" name="address" value="" placeholder="put your updated phone number ">
-        </div>
-        <button type="submit" class="btn">Update Profile</button>
-      </form>
-    </div>
-  </section>
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2023 Wallet App. All rights reserved.</p>
-    </div>
-  </footer>
+    </footer>
+    <!-- Include your JavaScript file -->
+    <script src="./js/profile.js"></script>
 </body>
 </html>

@@ -26,9 +26,9 @@ class Users {
     }
 
     // Update a user
-    public function update($id, $full_name, $phone, $address) {
-        $stmt = $this->db->conn->prepare("UPDATE users SET full_name = ?, phone_number = ?, address = ? WHERE id = ?");
-        $stmt->bind_param("sssi", $full_name, $phone, $address, $id);
+    public function update($id, $first_name, $last_name, $phone, $address) {
+        $stmt = $this->db->conn->prepare("UPDATE users SET first_name = ?, last_name = ?, phone_number = ?, address = ? WHERE id = ?");
+        $stmt->bind_param("ssssi", $first_name, $last_name, $phone, $address, $id);
         return $stmt->execute();
     }
 
