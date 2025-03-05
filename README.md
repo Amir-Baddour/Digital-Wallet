@@ -1,5 +1,5 @@
 # Digital-Wallet
-![Alt text](er.png)
+![Alt text](./client/assets/er.png)
 
 Documentation for Users API : 
 login.php: 
