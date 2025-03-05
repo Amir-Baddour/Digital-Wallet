@@ -1,5 +1,6 @@
 # Digital-Wallet
 ![Alt text](er.png)
+
 Documentation for Users API : 
 login.php: 
  
